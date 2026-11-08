@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio ของอารยา แสงศรี นักศึกษาสาขาเทคโนโลยีสารสนเทศ">
+  <title>Araya Saengsri | My Portfolio</title>
+  <style>
+    :root {
+      --cream: #f8f4ec;
+      --paper: #fffdf9;
+      --brown: #8b6b4f;
+      --dark: #35291f;
+      --muted: #796d62;
+      --line: #e9dfd2;
+      --soft: #efe5d8;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--cream); color: var(--dark);
+      font-family: "Segoe UI", Tahoma, sans-serif; line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1080px, calc(100% - 40px)); margin: auto; }
+    header {
+      position: sticky; top: 0; z-index: 10; background: rgba(248,244,236,.94);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--line);
+    }
+    nav { min-height: 70px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-weight: 800; letter-spacing: .08em; color: var(--brown); }
+    .navlinks { display:flex; gap:24px; flex-wrap:wrap; font-size:14px; color:var(--muted); }
+    .navlinks a:hover { color:var(--brown); }
+    .hero { display:grid; grid-template-columns: 1.25fr .75fr; gap:50px; align-items:center; padding:95px 0 85px; }
+    .eyebrow { color:var(--brown); font-size:13px; letter-spacing:.18em; text-transform:uppercase; font-weight:700; }
+    h1 { font-size:clamp(42px, 7vw, 76px); line-height:1.12; margin:14px 0; letter-spacing:-.04em; }
+    h1 span { color:var(--brown); }
+    .lead { color:var(--muted); max-width:580px; font-size:17px; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+    .btn { display:inline-block; padding:11px 20px; border-radius:999px; font-size:14px; font-weight:650; border:1px solid var(--brown); }
+    .btn.primary { background:var(--brown); color:white; }
+    .btn.secondary { color:var(--brown); }
+    .portrait {
+      width:min(300px, 100%); aspect-ratio:1; border-radius:48% 48% 42% 42%;
+      background:linear-gradient(145deg,#e7d7c4,#fdfaf4); border:1px solid #dfd0bf;
+      display:grid; place-items:center; margin:auto; box-shadow:18px 18px 0 #eadfD2;
+    }
+    .portrait-inner { width:78%; height:78%; border:1px dashed #b89a7d; border-radius:50%; display:grid; place-items:center; text-align:center; color:var(--brown); padding:20px; }
+    .portrait-inner strong { display:block; font-size:54px; line-height:1.1; }
+    .portrait-inner small { font-size:12px; letter-spacing:.12em; }
+    section { padding:72px 0; }
+    .section-head { margin-bottom:28px; }
+    .section-head .eyebrow { margin-bottom:4px; }
+    h2 { font-size:clamp(28px,4vw,40px); margin:0; letter-spacing:-.03em; }
+    .about-card, .skill, .project, .contact-card { background:var(--paper); border:1px solid var(--line); border-radius:22px; }
+    .about-card { padding:30px; color:var(--muted); max-width:850px; }
+    .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .skill { padding:22px; }
+    .skill .symbol { font-size:25px; color:var(--brown); }
+    .skill h3, .project h3 { margin:8px 0 4px; font-size:18px; }
+    .skill p, .project p { margin:0; color:var(--muted); font-size:14px; }
+    .project { padding:24px; min-height:190px; }
+    .project .tag { display:inline-block; padding:4px 10px; border-radius:99px; background:var(--soft); color:var(--brown); font-size:12px; margin-top:18px; }
+    .contact-card { padding:28px; display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; }
+    .contact-card p { color:var(--muted); margin:4px 0 0; }
+    footer { border-top:1px solid var(--line); padding:24px 0; color:var(--muted); font-size:13px; text-align:center; }
+    @media (max-width:760px) {
+      .hero { grid-template-columns:1fr; text-align:center; padding:65px 0; gap:38px; }
+      .lead { margin-inline:auto; }
+      .actions { justify-content:center; }
+      .portrait { width:230px; }
+      .navlinks { gap:12px; font-size:12px; justify-content:flex-end; }
+      .grid-3 { grid-template-columns:1fr; }
+      nav { align-items:flex-start; padding:16px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#home">ARAYA.</a>
+      <div class="navlinks">
+        <a href="#home">หน้าแรก</a><a href="#about">เกี่ยวกับฉัน</a><a href="#skills">ทักษะ</a><a href="#projects">ผลงาน</a><a href="#contact">ติดต่อ</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow">Welcome to my portfolio</div>
+        <h1>สวัสดีค่ะ ฉันชื่อ<br><span>อารยา แสงศรี</span></h1>
+        <p class="lead">นักศึกษาสาขาเทคโนโลยีสารสนเทศ (IT) ผู้สนใจการออกแบบเว็บไซต์ เทคโนโลยี และการสร้างสรรค์ผลงานดิจิทัล</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">ชมผลงานของฉัน</a>
+          <a class="btn secondary" href="#about">รู้จักฉันเพิ่มเติม</a>
+        </div>
+      </div>
+      <div class="portrait" aria-label="พื้นที่สำหรับใส่รูปโปรไฟล์">
+        <div class="portrait-inner"><div><strong>AS</strong><small>YOUR PHOTO</small></div></div>
+      </div>
+    </section>
+
+    <section class="wrap" id="about">
+      <div class="section-head"><div class="eyebrow">01 / About me</div><h2>เกี่ยวกับฉัน</h2></div>
+      <div class="about-card">
+        สวัสดีค่ะ ฉันชื่อ <strong>อารยา แสงศรี</strong> กำลังศึกษาอยู่ในสาขาเทคโนโลยีสารสนเทศ (Information Technology)
+        ฉันสนใจเรียนรู้เกี่ยวกับเทคโนโลยี การออกแบบ UI/UX และการพัฒนาเว็บไซต์
+        ชอบทดลองสิ่งใหม่ ๆ และตั้งใจพัฒนาความรู้และทักษะ เพื่อนำไปประยุกต์ใช้ในการเรียนและการทำงานในอนาคต
+      </div>
+    </section>
+
+    <section class="wrap" id="skills">
+      <div class="section-head"><div class="eyebrow">02 / My skills</div><h2>ทักษะและสิ่งที่สนใจ</h2></div>
+      <div class="grid-3">
+        <article class="skill"><div class="symbol">✦</div><h3>Web Design</h3><p>สนใจการจัดวางหน้าเว็บไซต์ให้สวยงาม ใช้งานง่าย และเหมาะกับผู้ใช้</p></article>
+        <article class="skill"><div class="symbol">⌘</div><h3>UI / UX Design</h3><p>สนใจการออกแบบหน้าจอและประสบการณ์การใช้งานด้วย Figma</p></article>
+        <article class="skill"><div class="symbol">▤</div><h3>Database</h3><p>เรียนรู้การจัดเก็บข้อมูล การออกแบบฐานข้อมูล และการใช้ SQL</p></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="projects">
+      <div class="section-head"><div class="eyebrow">03 / Selected work</div><h2>ผลงานของฉัน</h2></div>
+      <div class="grid-3">
+        <article class="project"><h3>Website Portfolio</h3><p>เว็บไซต์แนะนำตัวและรวบรวมข้อมูลการศึกษา ทักษะ และผลงาน</p><span class="tag">HTML · CSS</span></article>
+        <article class="project"><h3>Coffee Shop App</h3><p>ตัวอย่างงานออกแบบแอปพลิเคชันร้านกาแฟและหน้าจอแสดงรายการสินค้า</p><span class="tag">UI Design · Figma</span></article>
+        <article class="project"><h3>Database Coursework</h3><p>แบบฝึกหัดเกี่ยวกับฐานข้อมูล การเขียน SQL และการจัดการข้อมูล</p><span class="tag">Database · SQL</span></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="contact">
+      <div class="section-head"><div class="eyebrow">04 / Contact</div><h2>ติดต่อฉัน</h2></div>
+      <div class="contact-card">
+        <div><h3 style="margin:0">มาพูดคุยกันได้นะคะ</h3><p>ขอบคุณที่เข้ามาเยี่ยมชมเว็บไซต์ Portfolio ของฉัน</p></div>
+        <a class="btn primary" href="mailto:your-email@example.com">ส่งอีเมล</a>
+      </div>
+      <p style="font-size:12px;color:var(--muted);margin-top:12px">หมายเหตุ: เปลี่ยน your-email@example.com เป็นอีเมลจริงก่อนเผยแพร่ หากต้องการแสดงช่องทางติดต่อ</p>
+    </section>
+  </main>
+
+  <footer><div class="wrap">© 2026 Araya Saengsri · My Portfolio Website</div></footer>
+</body>
+</html>
